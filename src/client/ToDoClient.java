@@ -34,7 +34,7 @@ public class ToDoClient {
             System.out.println(e.getMessage());
         }
         System.out.println("[CLIENT] New ToDoClient created.");
-        
+
     }
 
     // Private helper methods to keep constructor clean of try/catch-clauses
@@ -125,76 +125,77 @@ public class ToDoClient {
         }
         
         public void login() {
-        	// ArrayList<String> loginData = new ArrayList<>();
-        	// sendMessage("LOGIN", loginData);
-        	// loginData.add("Username");
-        	// loginData.add("Password");
+        	ToDoClient toDoClient = new ToDoClient();
+            ArrayList<String> data = new ArrayList<>();
         	
-        	// (String) Token
+        	toDoClient.sendMessage("LOGIN", data);
+        	data.add("Username");
+        	data.add("Password");
+        	
+        	// Token
         }
         
         public void logout() {
         	
-        	// (String) Token must be invalid
+        	// Token must be invalid
         	
         	// DELETE toDoClient.sendMessage("LOGOUT", data);
         }
         
         
         public void createLogin() {
-        	// (String) Username (E-Mail Address)
-        	// (String) Password (3-20 characters) (+ validation)
-        	// (String) (Lastname, Surname)
-        	// (String) (Password Confirmation + validation) 
-        	// (String) (Token)
+        	// Username
+        	// Password
+        	// (Lastname, Surname)
+        	// (Password validation)
+        	// (Token)
         	
-        	// DELETE toDoClient.sendMessage("CREATE_LOGIN", data);
+        	// toDoClient.sendMessage("CREATE_LOGIN", data);
         }
         
         public void createToDo() {
-        	// (int) ID
-        	// (String) title (3-20 characters) (+ validation)
-        	// description (0 - 255 characters) (+ validation) (0 is ok too)
-        	// duedate (with and without a date) (+ Validation LocalDate is today or in the future)
-        	// Priority (take from Enum Class (Priority)
+        	// title (+ validation)
+        	// description (+ validation)
+        	// duedate (with and without)
+        	// Priority
         	// Token-Validation
         	
-        	// DELETE toDoClient.sendMessage("CREATE_TODO", data);
+        	// toDoClient.sendMessage("CREATE_TODO", data);
         }
 
         public void changePassword() {
-        	// (String) password (3-20 characters) (+ validation)
-        	// (String) (Password Confirmation + validation) 
-        	// (String) (Token) -> Must be valid
+        	// password
+        	// (password validation)
+        	// (Token)
         	// Validation (Password length + Token valid)
         	
-        	// DELETE toDoClient.sendMessage("CHANGE_PASSWORD", data);
+        	// toDoClient.sendMessage("CHANGE_PASSWORD", data);
         }
         
         public void getToDo() {
-        	// (String) ID
-        	// (String) Token-Validation
+        	// ID
+        	// Token-Validation
         	
-        	// DELETE toDoClient.sendMessage("GET_TODO", data);
+        	// toDoClient.sendMessage("GET_TODO", data);
         }
         
         public void deleteToDo() {
         	// getToDo();
         	// clear(); / remove();
-        	// (String) Token-Validation
+        	// Token-Validation
         	
-        	// DELETE toDoClient.sendMessage("DELETE_TODO", data);
+        	// toDoClient.sendMessage("DELETE_TODO", data);
         }
         
         public void listToDos() {
-        	// ArrayList
-        	// (String) Token-Validation
+        	// ArrayList data
+        	// Token-Validation
         	
-        	// DELETE toDoClient.sendMessage("LIST_TODOS", data);
+        	// toDoClient.sendMessage("LIST_TODOS", data);
         }
         
         public void ping() {
-        	// (String) Token
+        	// Token
         	
         	// toDoClient.sendMessage("PING", data);
         }
